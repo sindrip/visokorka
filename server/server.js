@@ -38,7 +38,7 @@ io.on('connection', function(socket){
       messageHladinn.pop();
     }
 
-    socket.emit('updateChat', messageHladinn)
+    io.emit('updateChat', messageHladinn)
   });
 });
 
