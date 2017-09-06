@@ -47,8 +47,7 @@ io.on('connection', function(socket){
   });
 
   socket.on('chat message', function(msg){
-    var textMsg = textFromHtmlString(msg);
-    messageHladinn.unshift(textMsg.substring(0, 100));
+    messageHladinn.unshift(msg.substring(0, 100).replace(/</g, "&lt;").replace(/>/g, "&gt;"));
     if (messageHladinn.length > 15) {
       messageHladinn.pop();
     }
