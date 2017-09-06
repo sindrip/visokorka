@@ -20,7 +20,7 @@
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  max-height: 300px;
+  max-height: 285px;
 }
 .chatlist .userInput, .chatlist .bot__output {
   padding: 0.85em;
