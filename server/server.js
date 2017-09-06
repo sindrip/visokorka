@@ -8,6 +8,9 @@ const path = require('path');
 const crawl = require('./crawl');
 
 var app = express();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
 const port = process.env.PORT || 3000;
 
 // PARSE REQ
@@ -18,6 +21,26 @@ app.use(morgan('dev'));
 
 // PUBLIC SERVE
 app.use(express.static('public'));
+
+var messageHladinn = [];
+
+io.on('connection', function(socket){
+  console.log('a user connected');
+  socket.emit('updateChat', messageHladinn);
+
+  socket.on('disconnect', function(){
+    console.log('user disconnected');
+  });
+
+  socket.on('chat message', function(msg){
+    messageHladinn.unshift(msg.substring(0, 100));
+    if (messageHladinn.length > 15) {
+      messageHladinn.pop();
+    }
+
+    socket.emit('updateChat', messageHladinn)
+  });
+});
 
 app.get('/', (req,res) => {
   //res.redirect('index2.html');
@@ -73,6 +96,6 @@ app.get('/scrape', (req, res) => {
     });
 });
 
-app.listen(port, () => {
+http.listen(port, () => {
   console.log(`Started on port ${port}`);
 })
