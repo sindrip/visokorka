@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       return false;
   }
   function addMessage() {
-    socket.emit('chat message', $(".chatbox")[0].value);
+    socket.emit('chat message', $(".chatbox")[0].value.toString());
 
     $(".chatbox")[0].value = '';
   }
