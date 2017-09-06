@@ -48,16 +48,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
     console.log(data.bidlisti);
     $(".mainTextP")[0].innerHTML = data.message;
     if(!data.bidlisti) {
+      console.log('test1')
       $(".noMessage").hide();
       $(".mbyMessage").show();
       $(".yesMessage").hide();
     }
-    else if(data.message === 'Nei') {
+    else if(data.message === 'NEI') {
+      console.log('test2');
       $(".queueNumber")[0].innerHTML = data.bidlisti;
       $(".noMessage").show();
       $(".mbyMessage").hide();
       $(".yesMessage").hide();
     } else {
+      console.log('test3')
       $(".noMessage").hide();
       $(".mbyMessage").hide();
       $(".yesMessage").show();
