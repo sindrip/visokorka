@@ -1,0 +1,70 @@
+body {
+  background-color: #F5F5DC !important;
+}
+
+main {
+  display: flex !important;
+  flex-direction: column;
+}
+
+/* Main content*/
+.mainContent {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
+.mainText {
+  display: flex;
+  flex-grow: 5;
+  flex-basis: 0;
+  justify-content: center;
+  align-items: center;
+}
+.mainTextP {
+  font-weight: 900;
+  font-size: 15em;
+}
+.supportText {
+  flex-grow: 1;
+  flex-basis: 0;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+/* Extra Content */
+.extraContent {
+  display: flex !important;
+  flex-direction: row;
+}
+.stats {
+  display: flex !important;
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  font-size: 1.2em;
+}
+.messageBoard {
+  display: flex !important;
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-direction: column;
+}
+.messageHeader {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+
+/* Mobile only CSS */
+@media only screen and (max-width: 600px) {
+  .extraContent {
+    flex-direction: column;
+  }
+}
