@@ -41,6 +41,7 @@ io.on('connection', function(socket){
   });
 
   socket.on('chat message', function(msg){
+    msg=msg.toString();
     messageHladinn.unshift(msg.substring(0, 100));
     if (messageHladinn.length > 15) {
       messageHladinn.pop();
