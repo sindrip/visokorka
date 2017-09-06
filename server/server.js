@@ -4,7 +4,6 @@ const morgan = require('morgan');
 const request = require('request');
 const cheerio = require('cheerio');
 
-
 const path = require('path');
 const crawl = require('./crawl');
 

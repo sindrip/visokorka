@@ -3,14 +3,74 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Flott síða</title>
+    <title>Vísókorka</title>
     <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/chat.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="/index.js"></script>
   </head>
   <body>
-    <h1>HELLO</h1>
+    <main>
+      <div class="mainContent">
+        <div class="mainText">
+          <p class="mainTextP">Nei</p>
+        </div>
+        <div class="supportText">
+          <p>
+            Melkorka er númer <span class="queueNumber">47</span> á biðlista.
+          </p>
+        </div>
+      </div>
+      <div class="extraContent">
+        <div class="stats">
+          <div class="daysSince">
+            <p>
+              Það eru <span class="daysSinceNumer">13</span> dagar síðan melkorka náði að skrá sig í vísó
+            </p>
+          </div>
+          <div class="averageQueue">
+            <p>
+              Melkorka er að meðaltali í sæti <span class="averageQueueNumber">55</span> í vísóskráningunni.
+            </p>
+          </div>
+        </div>
+        <div class="messageBoard">
+          <div class="messageHeader">
+            <p>
+              Segðu hvetjandi orð til Melkorku.
+            </p>
+          </div>
+          <div class="messageBody">
+            <div class="block--background">
+              <div class="chatbot__overview">
+                <ul id="chatlist" class="chatlist">
+                  <li class="bot__output bot__output--standard">Hey, I'm Navvy!</li>
+                  <li class="bot__output bot__output--standard">Hey, I'm Navvy!</li>
+                  <li class="bot__output bot__output--standard">Hey, I'm Navvy!</li>
+                  <li class="bot__output bot__output--standard">I will guide you through Mees' portfolio!</li>
+                  <li class="bot__output bot__output--standard">
+                    <span class="bot__output--second-sentence">You can ask me a bunch of things!</span>
+                    <ul>
+                      <li class="input__nested-list">Something <span class="bot__command">about</span> Mees</li>
+                      <li class="input__nested-list">Mees' <span class="bot__command">best work</span></li>
+                      <li class="input__nested-list">Maybe I could <span class="bot__command">help</span> (for more instructions)</li>
+                      <li class="input__nested-list">Type <span class="bot__command">commands</span> for a list of every command</li>
+                    </ul>
+                    You could also scroll down to see Mees' full portfolio
+                  </li>
+                </ul>
+              </div>
+              <div class="chatbox-area">
+                <form id="chatform">
+                  <textarea placeholder="Hughreystu Melkorku" class="chatbox" name="chatbox" resize: "none" minlength="2"></textarea>
+                  <input class="submit-button" type="submit" value="Hughreysta!">
+                </form>
+              </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
