@@ -25,10 +25,14 @@ var clients = [];
 
 io.on('connection', function(socket){
   clients.push(socket.id);
-  console.log(clients);
+  // console.log(clients);
 
   console.log('a user connected');
   socket.emit('updateChat', messageHladinn);
+
+  crawl.crawler((data) => {
+    io.emit('updateSkraning', data)
+  });
 
   socket.on('disconnect', function(){
     console.log('user disconnected');
@@ -43,10 +47,6 @@ io.on('connection', function(socket){
     }
 
     io.emit('updateChat', messageHladinn)
-
-    crawl.crawler((data) => {
-      io.emit('updateSkraning', data)
-    })
   });
 });
 
