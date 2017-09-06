@@ -45,6 +45,7 @@ main {
   align-items: center;
   padding-top: 30px;
   font-size: 1.2em;
+  font-weight: 600;
 }
 .messageBoard {
   padding-top: 30px;
