@@ -44,11 +44,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   })
   // Updates html with new data
   function updateData(data) {
-    testData = {
-      message: 'Nei',
-      queue: 48,
-    }
     // Updates text
+    console.log(data.bidlisti);
     $(".mainTextP")[0].innerHTML = data.message;
     if(!data.bidlisti) {
       $(".noMessage").hide();
