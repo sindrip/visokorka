@@ -19,8 +19,11 @@
           <p class="mainTextP">Nei</p>
         </div>
         <div class="supportText">
-          <p>
+          <p class="noMessage">
             Melkorka er númer <span class="queueNumber">47</span> á biðlista.
+          </p>
+          <p class="yesMessage" style="display:none;">
+            Melkorka komst í vísó!
           </p>
         </div>
       </div>
@@ -57,7 +60,7 @@
               </div>
               <div class="chatbox-area">
                 <form id="chatform">
-                  <textarea placeholder="Hughreystu Melkorku" class="chatbox" name="chatbox" resize: "none" minlength="2" maxLength="100  "></textarea>
+                  <textarea id='chatInput' placeholder="Hughreystu Melkorku" class="chatbox" name="chatbox" resize: "none" minlength="2" maxLength="100  "></textarea>
                   <input class="submit-button" type="submit" value="Hughreysta!">
                 </form>
               </div>
