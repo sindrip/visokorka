@@ -50,12 +50,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     // Updates text
     $(".mainTextP")[0].innerHTML = data.message;
-    if(data.message === 'Nei') {
-      $(".queueNumber")[0].innerHTML = data.queue;
+    if(!data.bidlisti) {
+      $(".noMessage").hide();
+      $(".mbyMessage").show();
+      $(".yesMessage").hide();
+    }
+    else if(data.message === 'Nei') {
+      $(".queueNumber")[0].innerHTML = data.bidlisti;
       $(".noMessage").show();
+      $(".mbyMessage").hide();
       $(".yesMessage").hide();
     } else {
       $(".noMessage").hide();
+      $(".mbyMessage").hide();
       $(".yesMessage").show();
     }
 
