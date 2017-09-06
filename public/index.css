@@ -37,21 +37,23 @@ main {
 .extraContent {
   display: flex !important;
   flex-direction: row;
+  justify-content: space-around;
 }
 .stats {
   display: flex !important;
-  flex-grow: 1;
-  flex-basis: 0;
   flex-direction: column;
   align-items: center;
   padding-top: 30px;
   font-size: 1.2em;
+  font-weight: 600;
+  width: 50%;
+  opacity: 0;
 }
 .messageBoard {
+  padding-top: 30px;
   display: flex !important;
-  flex-grow: 1;
-  flex-basis: 0;
   flex-direction: column;
+  width: 50%;
 }
 .messageHeader {
   display: flex !important;
@@ -66,5 +68,11 @@ main {
 @media only screen and (max-width: 600px) {
   .extraContent {
     flex-direction: column;
+  }
+  .stats {
+    width: 100%;
+  }
+  .messageBoard {
+    width: 100%;
   }
 }
