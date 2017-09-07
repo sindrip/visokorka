@@ -23,6 +23,12 @@ app.use(express.static('public'));
 var messageHladinn = [];
 var clients = [];
 
+function textFromHtmlString( arbitraryHtmlString ) {
+    const temp = document.createElement('div');
+    temp.innerHTML = arbitraryHtmlString;
+    return temp.innerText;
+}
+
 io.on('connection', function(socket){
   clients.push(socket.id);
   // console.log(clients);
@@ -41,7 +47,7 @@ io.on('connection', function(socket){
   });
 
   socket.on('chat message', function(msg){
-    messageHladinn.unshift(msg.substring(0, 100));
+    messageHladinn.unshift(msg.substring(0, 100).replace(/</g, "&lt;").replace(/>/g, "&gt;"));
     if (messageHladinn.length > 15) {
       messageHladinn.pop();
     }
