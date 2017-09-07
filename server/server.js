@@ -23,12 +23,6 @@ app.use(express.static('public'));
 var messageHladinn = [];
 var clients = [];
 
-function textFromHtmlString( arbitraryHtmlString ) {
-    const temp = document.createElement('div');
-    temp.innerHTML = arbitraryHtmlString;
-    return temp.innerText;
-}
-
 io.on('connection', function(socket){
   clients.push(socket.id);
   // console.log(clients);
