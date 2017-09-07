@@ -33,14 +33,14 @@ var crawler = (callback) => {
                   break;
                 }
               }
-
+              
               if (!mSkrad) {
-                return callback({message: 'Gleymdi að skrá sig :('});
+                return callback({message: 'Nei', extra: 'Gleymdi að skrá sig :('});
               }
               if (bidlisti === 0) {
-                return callback({message: 'JÁ!', bidlisti});
+                return callback({message: 'JÁ!', extra: 'Áfram Melkorka !!!'});
               } else {
-                return callback({message: 'NEI', bidlisti});
+                return callback({message: 'NEI', extra: 'Hún er númer ' + bidlisti + ' á biðlista :('});
               }
 
           });
