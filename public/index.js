@@ -47,7 +47,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // Updates text
     console.log(data.bidlisti);
     $(".mainTextP")[0].innerHTML = data.message;
-    if(!data.bidlisti) {
+    if(data.message.indexOf('J') !== -1) {
+     console.log('test3')
+     $(".noMessage").hide();
+     $(".mbyMessage").hide();
+     $(".yesMessage").show();
+   }
+    else if(!data.bidlisti) {
       console.log('test1')
       $(".noMessage").hide();
       $(".mbyMessage").show();
@@ -59,11 +65,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
       $(".noMessage").show();
       $(".mbyMessage").hide();
       $(".yesMessage").hide();
-    } else {
-      console.log('test3')
-      $(".noMessage").hide();
-      $(".mbyMessage").hide();
-      $(".yesMessage").show();
     }
 
   }
