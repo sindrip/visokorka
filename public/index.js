@@ -46,6 +46,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   function updateData(data) {
     // Updates text
     $(".mainTextP")[0].innerHTML = data.message;
-    $(".supportText")[0].innerHTML = data.extra;
+    $(".supportTextP")[0].innerHTML = data.extra;
   }
 });
