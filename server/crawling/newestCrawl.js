@@ -33,7 +33,7 @@ var crawler = (callback) => {
                   break;
                 }
               }
-              
+
               if (!mSkrad) {
                 return callback({message: 'Nei', extra: 'Gleymdi að skrá sig :('});
               }

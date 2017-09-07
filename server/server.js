@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
 const path = require('path');
-const crawl = require('./crawl');
+const crawl = require('./crawling/newestCrawl');
 
 var app = express();
 var http = require('http').Server(app);
@@ -48,7 +48,7 @@ io.on('connection', function(socket){
 
   socket.on('chat message', function(msg){
     if (!msg || msg.trim() === '') return;
-    
+
     messageHladinn.unshift(msg.substring(0, 100).replace(/</g, "&lt;").replace(/>/g, "&gt;"));
     if (messageHladinn.length > 15) {
       messageHladinn.pop();
