@@ -18,7 +18,7 @@ var crawler = (callback) => {
             }
               $ = cheerio.load(html);
               var queue = [];
-
+              // test
               const y = $('.registered-members li');
 
               var bidlisti = 0;
@@ -33,7 +33,7 @@ var crawler = (callback) => {
                   break;
                 }
               }
-              
+
               if (!mSkrad) {
                 return callback({message: 'Nei', extra: 'Gleymdi að skrá sig :('});
               }
