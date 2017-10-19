@@ -1,4 +1,4 @@
 Vísókorka
 ===================
 
-Þessi vefsíða fylgist með vísóskráningu Melkorku.
+Þessi vefsíða fylgist með vísóskráningu Melkorku..
